@@ -1,0 +1,184 @@
+
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    min-width: 450px;
+    left: 50%;
+    top: 50%;
+    margin: 0 auto;
+    background: var(--brand-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 40px;
+    .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0, 9);
+}
+}
+@media screen and (min-width: 1200px) {
+.modal {
+    max-width: 528px;
+    height: 581px;
+}
+}
+
+.modal-title {
+    @include font(20px, 700, 1.15, 0.03em);
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.modal-field {
+    margin-bottom: 10px;
+    position: relative;
+    &:nth-child(4) {
+    margin-bottom: 0;
+}
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+    border-color: var(--link-logo-color);
+}
+}
+
+.modal-wrap {
+    position: relative;
+}
+
+.modal-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-input:focus+ &,
+    .modal-input:hover+ & {
+    fill: var(--link-logo-color);
+}
+}
+
+.modal-close {
+    fill: rgba(0, 0, 0, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    fill: var(--link-logo-color);
+}
+}
+
+.modal-label {
+    font-size: 12px;
+    color: var(--content-text-color);
+    margin-bottom: 4px;
+    display: block;
+    outline: none;
+}
+
+.modal-text {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.check-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font(12px, 400, 1.71, 0.03em);
+    color: var(--content-text-color);
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        @include font(14px, 400, 1.71, 0.03em);
+            }
+}
+
+.check-text span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #090b13;
+    border-radius: 3px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-check {
+    fill: transparent;
+}
+
+.modal-check:checked+.check-text span {
+    background-color: var(--link-logo-color);
+    border: none;
+}
+
+.modal-check:checked+.check-text .icon-check {
+    fill: var(--brand-color);
+    background-size: contain;
+}
+
+.modal-btn {
+    position: absolute;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    top: 8px;
+    right: 8px;
+}
+
+.link-lable {
+    color: var(--link-logo-color);
+    margin-left: 3px;
+
+}
+
+.modal-send-btn {
+    min-width: 200px;
+    height: 50px;
+    background: var(--link-logo-color);
+    border-width: 0;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    @include font(16px, 700, 1.87, 0.06em);
+    text-align: center;
+    color: var(--brand-color);
+    padding: 10px 32px 10px 32px;
+    display: block;
+    margin: 0 auto;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
