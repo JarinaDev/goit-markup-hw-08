@@ -485,6 +485,10 @@ img {
   letter-spacing: 0.06em;
   color: var(--brand-color);
   padding: 10px 32px 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero__btn:hover, .hero__btn:focus {
+  background-color: #188CE8;
 }
 
 .hero__btn {
@@ -833,6 +837,10 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-map:hover, .link-map:focus {
+  color: var(--link-logo-color);
 }
 
 .link-mail {
@@ -841,6 +849,10 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-mail:hover, .link-mail:focus {
+  color: var(--link-logo-color);
 }
 
 .link-tell {
@@ -849,6 +861,10 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-tell:hover, .link-tell:focus {
+  color: var(--link-logo-color);
 }
 
 .contact-wrap {
@@ -923,6 +939,12 @@ img {
   position: relative;
   display: block;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-btn:hover, .subscribe-btn:focus {
+  background-color: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-icon {
@@ -961,6 +983,10 @@ img {
     width: 358px;
     margin-right: 12px;
   }
+}
+
+.subscribe-input:focus {
+  border-color: var(--link-logo-color);
 }
 
 .soc-link {
@@ -1251,6 +1277,12 @@ img {
   resize: none;
   padding: 12px 16px;
   margin-bottom: 20px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-text:focus {
+  border-color: var(--link-logo-color);
 }
 
 .check-text {
