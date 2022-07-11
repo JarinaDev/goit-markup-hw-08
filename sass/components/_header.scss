@@ -30,8 +30,8 @@
     align-items: center;
 
 }
-    
 }
+
 @media screen and (min-width: 768px) {
 .header__logo {
     margin-right: 93px;}
@@ -48,6 +48,14 @@
             display: none;
         }
 }
+.mob-open-icon {
+    fill: rgba(0, 0, 0, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        fill: var(--link-logo-color);
+    }}
+
 .mob-btn-close {
     display: block;
     position: absolute;
